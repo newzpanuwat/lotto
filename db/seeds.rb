@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+puts "Seed file is generating..."
+User.create(email: "test@example.com", password: "password1234", password_confirmation: "password1234")
+
+
+puts "Seed file has been successful!!!"
