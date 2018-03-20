@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lotto</title>
+    <!-- Disable Responsive -->
+  <% if request.env['PATH_INFO'].include?('admin') %>
+    <meta name="viewport" content="initial-scale=0.1">
+  <% else %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <% end %>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="row">
+       <div class="col-md-6 offset-md-3">
+         <%= devise_error_messages! if controller_name.eql?('passwords') %>
+         <% if notice.present? %>
+         <div id="success-alert" class="alert alert-success alert-dismissible fade show" role="alert">
+           <%= notice %>
+           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+             <span aria-hidden="true">&times;</span>
+           </button>
+         </div>
+         <% end %>
+
+         <% if alert.present? %>
+         <div id="danger-alert" class="alert alert-danger alert-dismissible fade show" role="alert">
+           <%= alert %>
+           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+             <span aria-hidden="true">&times;</span>
+           </button>
+         </div>
+         <% end %>
+       </div>
+     </div>
+    <%= yield %>
+  </body>
+</html>
