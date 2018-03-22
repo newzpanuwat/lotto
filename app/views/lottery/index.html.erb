@@ -1,47 +1,41 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <!-- <a class="navbar-brand" href="#">Navbar</a> -->
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
       <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
       <%= link_to('Logout', destroy_user_session_path, method: :delete, class: "nav-item nav-link") %>
-      <!-- <a class="nav-item nav-link" href="#">Logout</a> -->
-      <!-- <a class="nav-item nav-link" href="#">Pricing</a> -->
-      <!-- <a class="nav-item nav-link disabled" href="#">Disabled</a> -->
     </div>
   </div>
 </nav>
 <br />
 <div class="row">
   <div class="container">
-    <div class="col-md-4">
-      <h2>กรอกข้อมูล 1</h2> <br/ >
-      <input type="text" class="form-control" placeholder="ใส่ตัวเลข 2 หลัก"> &nbsp;
-      <input type="text" class="form-control" placeholder="จำนวนเงิน">
-    </div>
-
-    <br />
-    <div class="col-8 pull-left">
-      <button type="button" class="btn btn-warning"> ตกลง</button>
+    <div class="col-md-4 offset-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h3 class="text-dark">กรอกข้อมูล 1</h3> <br />
+          <input type="text" class="form-control" placeholder="ใส่ตัวเลข 2 หลัก"> &nbsp;
+          <input type="text" class="form-control" placeholder="จำนวน"><br />
+          <center><button type="button" class="btn btn-warning"> ตกลง</button></center> <br />
+        </div>
+        <div class="card-body">
+          <h3 class="text-dark">กรอกข้อมูล 2</h3> <br />
+          <input type="text" class="form-control" placeholder="ใส่ตัวเลข 3 หลัก"> &nbsp;
+          <input type="text" class="form-control" placeholder="จำนวน"><br />
+          <center><button type="button" class="btn btn-warning"> ตกลง</button></center> <br /> &nbsp; &nbsp; 
+        </div>
+      </div>
     </div>
   </div>
 </div>
-
 <br />
-
-<div class="row">
-  <div class="container">
-    <div class="col-md-4">
-      <h2>กรอกข้อมูล 2</h2> <br/ >
-      <input type="text" class="form-control" placeholder="ใส่ตัวเลข 3 หลัก"> &nbsp;
-      <input type="text" class="form-control" placeholder="จำนวนเงิน">
-    </div>
-
-    <br />
-    <div class="col-8 pull-left">
-      <button type="button" class="btn btn-warning"> ตกลง</button>
-    </div>
-  </div>
-</div>
