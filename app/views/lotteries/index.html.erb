@@ -1,0 +1,26 @@
+<%= render "nav" %>
+<table class="table table-striped">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col" width="10%">#</th>
+      <th scope="col" width="15%">วันที่สร้าง</th>
+      <th scope="col" width="15">2ตัว</th>
+      <th scope="col" width="20%">รวม</th>
+      <th scope="col" width="20%">3ตัว</th>
+      <th scope="col" width="20%">รวม</th>
+    </tr>
+  </thead>
+    
+  <tbody>
+    <% @lotteries.each do |lottery| %>
+    <tr class="table-light">
+      <td><%= link_to 'ลบ', lottery, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
+      <td><%= lottery.created_at.strftime("%d/%m/%Y") %></td>
+      <td><%= lottery.two_digit %></td>
+      <td><%= lottery.amount %></td>
+      <td><%= lottery.three_digit %></td>
+      <td><%= lottery.amount_three %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

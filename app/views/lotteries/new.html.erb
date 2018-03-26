@@ -1,0 +1,25 @@
+<%= render "nav" %>
+
+<div class="row">
+  <div class="container">
+    <div class="col-md-4 offset-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h3 class="text-dark">กรอกข้อมูล 1</h3> <br />
+          <%= form_for @lottery, url: {action: "create"} do |f| %>
+            <div class="form-group">
+                <%= f.text_field :two_digit, class: "form-control", placeholder: "ใส่ตัวเลข 2 หลัก" %> <br />
+                <%= f.text_field :amount, class: "form-control", placeholder: "จำนวน" %> <br />
+                <h3 class="text-dark">กรอกข้อมูล 2</h3> <br />
+                <%= f.text_field :three_digit, class: "form-control", placeholder: "ใส่ตัวเลข 3 หลัก" %> <br />
+                <%= f.text_field :amount_three, class: "form-control", placeholder: "จำนวน" %> <br />
+                <center><%= f.submit "submit", class: "btn btn-default btn-primary" %></center>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

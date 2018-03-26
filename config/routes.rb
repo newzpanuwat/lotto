@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: "lottery#index"
+  root to: "lotteries#new"
 
-  resource :lottery
+  resources :lotteries
+  # get 'lottery/:user_id' => 'lotteries#destroy'
 end

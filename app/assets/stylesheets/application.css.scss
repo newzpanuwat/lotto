@@ -11,6 +11,7 @@
  * It is generally better to create a new file per style scope.
  *
  *= require_tree .
+ *= require font-awesome
  *= require_self
  */
 
@@ -48,7 +49,16 @@
   top: 0;
   right: 0;
   left: 0;
-  margin: 10px 10px 10px 10px;
+  margin: 5px 10px 10px 10px;
+  z-index: 9;
+}
+
+ .notice {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: 5px 10px 10px 10px;
   z-index: 9;
 }
 

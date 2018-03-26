@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180322150847) do
+ActiveRecord::Schema.define(version: 20180326175538) do
 
   create_table "lotteries", force: :cascade do |t|
     t.string "two_digit"
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20180322150847) do
     t.integer "amount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "amount_three"
   end
 
   create_table "users", force: :cascade do |t|
